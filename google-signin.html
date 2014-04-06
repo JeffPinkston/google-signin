@@ -1,4 +1,4 @@
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="bower_components/polymer/polymer.html">
 
 <!--
 Copyright (c) 2014 Google Inc. All rights reserved. This code may only be used under the BSD style
@@ -79,7 +79,7 @@ process.
                     handler.fire('google-signin-success', {result: authResult});
                 } else {
                     // No access token could be retrieved, show the button to start the authorization flow.
-                    handle.fire('google-signin-failure', {result: authResult});
+                    handler.fire('google-signin-failure', {result: authResult});
                     authButton.style.display = 'block';
                     authButton.onclick = function() {
                         gapi.auth.authorize(
